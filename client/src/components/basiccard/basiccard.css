@@ -1,0 +1,63 @@
+.insideimage{
+    width: 30px;
+    height: 30px;
+    border-radius: 13px;
+    margin-top: 10px;
+    /* margin-left: 10px;
+    border: 1px solid blue; */
+}
+
+.searchimage{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* border: 1px solid blue; */
+    height: 50px;
+}
+
+.description{
+    width: 46%;
+    display: flex;
+    /* border: 1px solid green; */
+}
+
+.mainbasic{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    background-color: white;
+    margin-bottom: 5px;
+    width: 450px;
+    height: 70px;
+}
+
+.greentick{
+    width: 8px;
+    height: 8px;
+    margin-top: 30px;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 8px;
+}
+
+.notick{
+    width: 8px;
+    height: 8px;
+    margin-top: 30px;
+    border: 1px solid grey;
+    /* background-color: green; */
+    border-radius: 8px;
+}
+
+.nameof{
+    margin-left: 10px;
+    margin-top: 14px;
+    text-align: left;
+}
+
+.species{
+    margin-left: 10px;
+    margin-top: 23px;
+}
+

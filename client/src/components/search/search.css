@@ -1,0 +1,37 @@
+.inputtag{
+    width: 340px;
+    height: 60px;
+    margin-bottom: 13px;
+    margin-left: 35%;
+    border: none;
+    outline: none;
+    padding: 5px 60px ;
+    font-size: 15px;
+}
+
+.heading{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 45px;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.listcontainer{
+    margin-left: 14px;
+    height: 320px;
+    overflow: scroll;
+}
+
+.inputdiv{
+    display: flex;
+}
+
+.iosearch{
+    position: absolute;
+    z-index: 1;
+    left: 37%;
+    top: 31.5%
+}
