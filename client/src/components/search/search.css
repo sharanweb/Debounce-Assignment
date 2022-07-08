@@ -5,8 +5,9 @@
     margin-left: 35%;
     border: none;
     outline: none;
-    padding: 5px 60px ;
+    padding: 3px 60px ;
     font-size: 15px;
+    color: grey;
 }
 
 .heading{
@@ -33,5 +34,7 @@ body{
     position: absolute;
     z-index: 1;
     left: 37%;
-    top: 31.5%
+    top: 31.5%;
+    color: grey;
+    
 }

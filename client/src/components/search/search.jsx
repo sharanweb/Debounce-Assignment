@@ -1,4 +1,4 @@
-import { useState, useCallback, useContext } from "react";
+import { useState, useCallback, useContext, useEffect } from "react";
 import axios from "axios";
 import { BasicCard } from "../basiccard/basiccard";
 import "./search.css";
@@ -9,12 +9,12 @@ import "./search.css";
 
 export const Search = ()=>{
     const [data, setData] = useState([]);
-    // const [clicked, setClicked] = useState(false);
-    // const [modaldata, setModaldata] = useState({});
+    const [page, setPage] = useState(1);
+  
     const {click, check, setCheck, setClick} = useContext(cardContext);
 
     const getData = (event)=>{
-        axios.get("https://rickandmortyapi.com/api/character/?name=rick&page=1").then((res)=>{
+        axios.get(`https://rickandmortyapi.com/api/character/?name=rick&page=${page}`).then((res)=>{
             setData(res.data.results);
         })
     }
@@ -34,12 +34,15 @@ export const Search = ()=>{
 
     const afterdebounce  = useCallback(debounce(getData), [])
 
-    // const handleClick = ()=>{
-    //     console.log("clicked");
-    //     // setClicked(true);
-    //     // setModaldata(e);
-
-    // }
+    function scrollingPage(e) {
+        // console.log(e);
+        const bottom = e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop < 50;
+        if (bottom) {
+            if (page<6)
+            setPage((p) => p + 1);
+        }
+    }
+    
 
 
     return(
@@ -53,7 +56,7 @@ export const Search = ()=>{
             </div>
             
             
-            <div className="listcontainer">
+            <div className="listcontainer" onScroll={scrollingPage}>
                 {
                     data.map((el,index)=>(
                         <BasicCard props={el}  key={index}></BasicCard>
